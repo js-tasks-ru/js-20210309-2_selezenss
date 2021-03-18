@@ -5,5 +5,7 @@
  * @returns {object} - returns the new object
  */
 export const pick = (obj, ...fields) => {
-
+  return Object.fromEntries(Object.entries(obj).filter(function (item) {
+    return fields.indexOf(item[0]) !== -1;
+  }));
 };
