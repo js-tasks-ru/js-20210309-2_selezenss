@@ -6,6 +6,6 @@
  */
 export const pick = (obj, ...fields) => {
   return Object.fromEntries(Object.entries(obj).filter(function (item) {
-    return fields.indexOf(item[0]) !== -1;
+    return fields.includes(item[0]);
   }));
 };
